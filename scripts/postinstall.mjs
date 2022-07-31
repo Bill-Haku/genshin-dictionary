@@ -28,6 +28,7 @@ if (process.env.LANGDATA_PATH) {
     copyFile(resolve(process.env.LANGDATA_PATH, "dist/words.csv"), resolve(__dirname, "../static/dataset/words.csv")),
     copyFile(resolve(process.env.LANGDATA_PATH, "dist/words-sjis.csv"), resolve(__dirname, "../static/dataset/words-sjis.csv")),
     copyFile(resolve(process.env.LANGDATA_PATH, "dist/tags.json"), resolve(__dirname, "../static/dataset/tags.json")),
+    copyFile(resolve(process.env.LANGDATA_PATH, "dist/redirect-words.json"), resolve(__dirname, "../static/dataset/redirect-words.json")),
   ]);
 
   console.info(`Copied dataset from ${process.env.LANGDATA_PATH}`);
@@ -39,6 +40,7 @@ if (process.env.LANGDATA_PATH) {
     copyFromURL("https://dataset.genshin-dictionary.com/words.csv", resolve(__dirname, "../static/dataset/words.csv")),
     copyFromURL("https://dataset.genshin-dictionary.com/words-sjis.csv", resolve(__dirname, "../static/dataset/words-sjis.csv")),
     copyFromURL("https://dataset.genshin-dictionary.com/tags.json", resolve(__dirname, "../static/dataset/tags.json")),
+    copyFromURL("https://dataset.genshin-dictionary.com/redirect-words.json", resolve(__dirname, "../static/dataset/redirect-words.json")),
   ]);
 
   console.info("Fetched dataset from dataset.genshin-dictionary.com.");
