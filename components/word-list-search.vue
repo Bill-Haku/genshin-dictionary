@@ -64,7 +64,7 @@
 </i18n>
 
 <script setup>
-import allTags from "~/static/dataset/tags.json";
+import allTags from "~/public/dataset/tags.json";
 import { klona } from "klona/json";
 import { debounce } from "lodash";
 import { storeToRefs } from "pinia";
