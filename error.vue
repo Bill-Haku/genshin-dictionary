@@ -20,10 +20,10 @@
 }
 </i18n>
 
-<script>
-export default {
-  layout: "default",
-};
+<script setup>
+  const props = defineProps({
+    error: Object,
+  });
 </script>
 
 <style lang="scss" scoped>
