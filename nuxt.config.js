@@ -58,11 +58,6 @@ export default defineNuxtConfig({
 
   css: [ "~/assets/styles/global.scss" ],
 
-  router: {
-    trailingSlash: true,
-    middleware: "trailing-slash",
-  },
-
   modules: [
     "@nuxtjs/i18n",
     "@nuxtjs/robots",
