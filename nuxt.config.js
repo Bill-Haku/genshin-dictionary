@@ -3,16 +3,6 @@ import { defineNuxtConfig } from "nuxt";
 import words from "./public/dataset/words.json";
 import tags from "./public/dataset/tags.json";
 
-async function routes() {
-  const tagIDs = Object.keys(tags);
-
-  return [
-    "/",
-    ...(words.map(word => `/${word.id}/`)),
-    ...(tagIDs.map(tagID => `/tags/${tagID}/`)),
-  ];
-}
-
 export default defineNuxtConfig({
   // ▼▼ Workaround for Nuxt 3 bug ▼▼
   // @see https://github.com/nuxt/framework/issues/1151#issuecomment-983531703
@@ -68,10 +58,6 @@ export default defineNuxtConfig({
 
   css: [ "~/assets/styles/global.scss" ],
 
-  generate: {
-    fallback: "404.html",
-    routes,
-  },
   router: {
     trailingSlash: true,
     middleware: "trailing-slash",
