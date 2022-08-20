@@ -168,6 +168,7 @@ onUpdated(async () => {
 //
 // event handlers
 //
+const localePath = useLocalePath()
 const copyLink = async (wordId, $event) => {
   navigator.clipboard.writeText(`https://genshin-dictionary.com/${i18n.locale}/${wordId}/`);
 
